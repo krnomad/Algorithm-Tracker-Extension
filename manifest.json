@@ -1,0 +1,26 @@
+{
+    "manifest_version": 3,
+    "name": "Algorithm Tracker Helper",
+    "version": "1.0",
+    "permissions": ["tabs", "scripting", "notifications"],
+    "host_permissions": [
+    "*://school.programmers.co.kr/*",
+    "*://algorithm-tracker.vercel.app/*"
+    ],
+
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon48.png"
+    },
+    "content_scripts": [
+    {
+        "matches": [
+        "https://school.programmers.co.kr/learn/courses/30/lessons/*",
+        "https://algorithm-tracker.vercel.app/*"
+        ],
+        "js": ["content.js"]
+    }
+    ]
+
+  }
+  
